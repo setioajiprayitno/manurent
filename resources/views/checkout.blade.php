@@ -73,7 +73,7 @@
                     this.active = true;
                 }
             }">
-                <x-form-dropdown title="Jenis Mobil" name="jenisMobil" />
+                <x-form-dropdown title="Jenis Mobil" name="jenisMobil" id="jenisMobil" />
             </div>
 
             <div x-data="{
@@ -86,7 +86,7 @@
                     this.active = true;
                 }
             }">
-                <x-form-dropdown title="Transmisi" name="transmisi" />
+                <x-form-dropdown title="Transmisi" name="transmisi" id="transmisi"/>
             </div>
 
             <div>

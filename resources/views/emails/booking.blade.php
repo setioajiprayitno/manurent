@@ -1,14 +1,15 @@
 <x-mail::message>
     # BOOKING
 
-    nama : {{ $data['nama']}}
-    nama : {{ $data['noHp']}}
-    nama : {{ $data['alamat']}}
+    nama : {{ $data['name']}}
+    nama : {{ $data['phoneNumber']}}
+    nama : {{ $data['address']}}
     nama : {{ $data['email']}}
     nama : {{ $data['jenisMobil']}}
-    nama : {{ $data['jam']}}
-    nama : {{ $data['tanggal']}}
-    nama : {{ $data['supir']}}
+    nama : {{ $data['transmisi']}}
+    nama : {{ $data['time']}}
+    nama : {{ $data['date']}}
+    nama : {{ $data['driver']}}
 
     <x-mail::button :url="''">
         Button Text
