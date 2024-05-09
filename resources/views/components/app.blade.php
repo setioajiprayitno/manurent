@@ -19,7 +19,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="{{ $color ?? 'bg-yellow-500' }}">
+<body class="{{ $color ?? 'bg-white' }}">
     {{ $slot }}
 </body>
 

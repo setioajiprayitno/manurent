@@ -90,10 +90,22 @@
             <div>
                 <label for="time" class="block text-base font-semibold text-[#1A202C]">Jam</label>
                 <div class="mt-4">
-                    <div
+                    <div x-data="{ empty: true }"
                         class="flex rounded-md shadow-sm bg-[#FFEDCB] ring-1 ring-inset ring-[#FFEDCB] focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-700">
-                        <input type="time" name="time" id="time" autocomplete="time"
+                        <input x-data="" type="time" name="time" id="time" autocomplete="time"
                             class="flex-1 block py-4 pl-6 text-gray-900 bg-transparent border-0 focus:ring-0">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 mt-4">
+                    <div class="flex gap-4 items-center">
+                        <input type="radio" class="focus:ring-yellow-700 text-yellow-700 checked:bg-yellow-700 "
+                            name="driver" id="with-driver" value="1" />
+                        <label for="with-driver">Dengan Supir</label>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <input type="radio" class="focus:ring-yellow-700 text-yellow-700 checked:bg-yellow-700 "
+                            name="driver" id="without-driver" value="0" />
+                        <label for="without-driver">Tanpa Supir</label>
                     </div>
                 </div>
             </div>
@@ -108,7 +120,9 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
 
     <div x-data="{ open: false }" class="flex justify-center mb-16">

@@ -1,4 +1,4 @@
-<div class="bg-white rounded-lg p-5 font-jakartaSans text-[#1A202C] font-bold">
+<div class="bg-white rounded-lg p-5 font-jakartaSans text-[#1A202C] font-bold shadow-lg">
     <h6>{{ $name }}</h6>
     <p class="text-[#90A3BF]">{{ $brand }}</p>
     <img src="assets/images/{{ $src }}" alt="image" class="object-cover mx-auto my-6 h-36">
