@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,6 @@ Route::get('/car', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 });
+
+
+// Route::get('/test', [BookingController::class, 'index']);
