@@ -48,6 +48,7 @@ class BookingController extends Controller
 
         Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
 
-        return response()->json(['message' => 'Email berhasil terkirim']);
+        return view('/home');
+        // return response()->json(['message' => 'Email berhasil terkirim']);
     }
 }

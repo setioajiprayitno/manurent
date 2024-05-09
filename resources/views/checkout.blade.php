@@ -67,7 +67,10 @@
                 <div x-data="{
                     open: false,
                     active: false,
-                    items: ['CRV', 'BRV', 'Brio'],
+                    items: [
+                        'CRV', 'BRV', 'Brio', 'Jazz', 'Civic', 'City', 'Mobolio', 'All New Terios',
+                        'All New Avanza', 'New Ertiga', 'Innova 2.0', 'Innova 2.5', 'All New Rush'
+                        ],
                     selected: 'Pilih Mobil',
                     click(selected) {
                         this.selected = selected;

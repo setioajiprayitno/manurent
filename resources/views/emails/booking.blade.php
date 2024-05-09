@@ -9,12 +9,12 @@
     Transmisi   : {{ $data['transmisi']}}
     Jam         : {{ $data['time']}}
     Tanggal     : {{ $data['date']}}
-    Supir       : {{ $data['driver']}}
+    Supir       : {{ $data['driver'] ? 'dengan supir' : 'tanpa supir' }}
 
-    <!-- <x-mail::button :url="''">
+    <x-mail::button :url="'http://manurent.com/'">
         Button Text
     </x-mail::button>
 
-    Thanks,<br> -->
+    <!-- Thanks,<br> -->
     {{ config('app.name') }}
 </x-mail::message>
