@@ -1,7 +1,7 @@
 <div class="bg-white rounded-lg p-5 font-jakartaSans text-[#1A202C] font-bold">
     <h6>{{ $name }}</h6>
     <p class="text-[#90A3BF]">{{ $brand }}</p>
-    <img src="assets/images/{{ $src }}" alt="image" class="my-6 h-36 object-cover mx-auto">
+    <img src="assets/images/{{ $src }}" alt="image" class="object-cover mx-auto my-6 h-36">
     <div class="flex justify-between">
         <div class="flex flex-col">
             <h5>Rp. {{ $price }}</h5>

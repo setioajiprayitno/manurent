@@ -1,10 +1,10 @@
 <x-app>
-    <div class="min-h-100 font-poppins text-center">
+    <div class="text-center min-h-100 font-poppins">
         <h1 class="text-white w-[650px] leading-[100px] font-extrabold text-6xl mx-auto my-20">SEWA MOBIL
             CEPAT GAK
             PAKE RIBET!</h1>
-        <h2 class="font-jakartaSans font-medium text-5xl">Cara Kerja</h2>
-        <p class="font-jakartaSans font-normal text-lg my-12">Berikut adalah cara kerja pada sistem web kami.</p>
+        <h2 class="text-5xl font-medium font-jakartaSans">Cara Kerja</h2>
+        <p class="my-12 text-lg font-normal font-jakartaSans">Berikut adalah cara kerja pada sistem web kami.</p>
 
         <div class="flex justify-between mx-10">
             <x-item-cara-kerja icon="location-dot" title="Pilih Lokasi"
@@ -15,8 +15,8 @@
                 subtitle="Pilih mobil kesukaanmu untuk menemani perjalananmu yang luar biasa." />
         </div>
 
-        <h1 class="text-6xl font-extrabold mb-10 mt-16">MANURENT.</h1>
-        <p class="font-medium text-2xl w-5/6 mx-auto">MANURENT adalah sebuah perusahaan yang
+        <h1 class="mt-16 mb-10 text-6xl font-extrabold">MANURENT.</h1>
+        <p class="w-5/6 mx-auto text-2xl font-medium">MANURENT adalah sebuah perusahaan yang
             bergerak di bidang
             penyewaan mobil untuk
             berbagai keperluan. Kami menyediakan berbagai jenis mobil yang berkualitas dan terawat
@@ -25,20 +25,20 @@
             rental mobil yang cepat, mudah, dan terpercaya kepada pelanggan kami.</p>
         <div class="flex gap-3 ms-32 my-14">
             @for ($i = 0; $i < 4; $i++)
-                <div class="w-5 h-4 rounded-full border-4 border-black"></div>
+                <div class="w-5 h-4 border-4 border-black rounded-full"></div>
             @endfor
         </div>
-        <p class="font-semibold text-4xl text-white my-4">Rekomendasi Mobil :</p>
-        <p class="font-semibold text-base text-white">Kami menyiapkan beberapa rekomendasi mobil untuk anda</p>
+        <p class="my-4 text-4xl font-semibold text-white">Rekomendasi Mobil :</p>
+        <p class="text-base font-semibold text-white">Kami menyiapkan beberapa rekomendasi mobil untuk anda</p>
 
         <div class="grid grid-cols-4 gap-3 mx-10 my-8">
             <x-item-rekomendasi-mobil src="AVANZA.png" title="All New Avanza" brand="Toyota" />
             <x-item-rekomendasi-mobil src="TERIOS.png" title="All New Terios" brand="Daihatsu" />
             <x-item-rekomendasi-mobil src="BRIO.png" title="Brio" brand="Honda" />
-            <a href="car" class="w-72 h-56">
+            <a href="car" class="h-56 w-72">
                 <div class="bg-white rounded-[30px] flex flex-col justify-evenly h-full">
-                    <p class="font-medium text-2xl">Show More</p>
-                    <i class="fa-solid fa-circle-plus text-5xl"></i>
+                    <p class="text-2xl font-medium">Show More</p>
+                    <i class="text-5xl fa-solid fa-circle-plus"></i>
                 </div>
             </a>
         </div>

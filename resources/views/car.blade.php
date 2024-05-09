@@ -1,7 +1,7 @@
 <x-app>
-    <div class="font-poppins p-10">
+    <div class="p-10 font-poppins">
         <h5 class="text-2xl font-bold">Daftar Mobil</h5>
-        <div class="grid grid-cols-4 gap-6 gap-y-12 mt-10">
+        <div class="grid grid-cols-4 gap-6 mt-10 gap-y-12">
             <x-item-car-rent brand="Honda" name="Jazz" price="350.000" src="JAZZ.jpg" />
             <x-item-car-rent brand="Honda" name="Civic" price="350.000" src="CIVIC.jpg" />
             <x-item-car-rent brand="Honda" name="BR-V" price="450.000" src="BRV.png" />
