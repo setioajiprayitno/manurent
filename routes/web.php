@@ -25,6 +25,7 @@ Route::get('/car', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 });
+Route::post('/send', [BookingController::class, 'send'])->name('booking.send');
 
 
 // Route::get('/test', [BookingController::class, 'index']);

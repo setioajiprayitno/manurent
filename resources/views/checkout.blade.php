@@ -5,6 +5,8 @@
 
     <div class="container font-jakartaSans bg-white mx-auto rounded-xl p-6 my-8">
         <h5 class="text-xl font-bold">Billing Info</h5>
+        <form action="{{ route('booking.send')}}" method="POST">
+            @csrf
         <p class="text-[#90A3BF] font-medium">Masukkan Data Anda</p>
         <div class="grid grid-cols-2 gap-x-8 gap-y-10 mt-12">
             <div>
@@ -114,6 +116,7 @@
     <div x-data="{ open: false }" class="flex justify-center mb-16">
         <button @click="open = !open" class="bg-[#FFC700] text-base font-semibold p-2 w-72 rounded">Booking
             Sekarang</button>
+        </form>
         <div x-show="open" class="fixed top-0 w-full h-full bg-black/65 text-2lg flex flex-col justify-center">
             <div x-show="open" @click.outside="open = false" x-transition
                 class="bg-[#FFF9EF] w-2/3 mx-auto flex flex-col items-center p-8 font-jakartaSans gap-6 rounded-xl transition-transform">
