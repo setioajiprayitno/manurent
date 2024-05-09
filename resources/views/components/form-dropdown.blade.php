@@ -3,7 +3,7 @@
     <div class="relative">
         <div class="mt-4">
             <button type="button"
-                class="flex w-full justify-between rounded-md bg-[#FFEDCB] ring-[#FFEDCB] px-6 py-4 text-sm font-semibold text-[#90A3BF] shadow-sm ring-1 ring-inset"
+                class="flex w-full justify-between rounded-md bg-[#FFEDCB] ring-[#FFEDCB] px-6 py-4 text-sm font-semibold text-[#90A3BF] shadow-sm ring-1 ring-inset focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-700"
                 id="menu-button" :class="{ 'text-gray-900': active, 'text-[#90A3BF]': !active }" @click="open = !open">
                 <p x-text="selected"></p>
                 <i class="items fa-solid fa-chevron-down my-auto"></i>

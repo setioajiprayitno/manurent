@@ -111,8 +111,23 @@
         </div>
     </div>
 
-    <div class="flex justify-center mb-16">
-        <button class="bg-[#FFC700] text-base font-semibold p-2 w-72">Booking Sekarang</button>
+    <div x-data="{ open: false }" class="flex justify-center mb-16">
+        <button @click="open = !open" class="bg-[#FFC700] text-base font-semibold p-2 w-72 rounded">Booking
+            Sekarang</button>
+        <div x-show="open" class="fixed top-0 w-full h-full bg-black/65 text-2lg flex flex-col justify-center">
+            <div x-show="open" @click.outside="open = false" x-transition
+                class="bg-[#FFF9EF] w-2/3 mx-auto flex flex-col items-center p-8 font-jakartaSans gap-6 rounded-xl transition-transform">
+                <i class="fa-regular fa-circle-check text-6xl"></i>
+                <h3 class="text-2xl font-bold">Pemesanan Berhasil!</h3>
+                <p class="text-center font-semibold text-lg text-black/60">Terima kasih telah melakukan pemesanan mobil
+                    melalui website kami. Untuk info lebih lanjut, bisa
+                    melalui kontak yang tertera.</p>
+                <a href="/" class="bg-[#FFC700] text-base font-semibold p-2 w-48 rounded-xl text-center">Ke Menu
+                    Utama</a>
+            </div>
+        </div>
     </div>
+
     <x-footer />
+
 </x-app>

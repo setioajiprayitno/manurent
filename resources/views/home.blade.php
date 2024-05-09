@@ -1,6 +1,7 @@
 <x-app>
     <div class="min-h-100 font-poppins text-center">
-        <h1 class="text-white w-[600px] leading-[100px] font-extrabold text-6xl mx-auto my-20">SEWA MOBIL CEPAT GAK
+        <h1 class="text-white w-[650px] leading-[100px] font-extrabold text-6xl mx-auto my-20">SEWA MOBIL
+            CEPAT GAK
             PAKE RIBET!</h1>
         <h2 class="font-jakartaSans font-medium text-5xl">Cara Kerja</h2>
         <p class="font-jakartaSans font-normal text-lg my-12">Berikut adalah cara kerja pada sistem web kami.</p>
