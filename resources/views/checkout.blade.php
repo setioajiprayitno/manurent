@@ -5,6 +5,8 @@
 
     <div class="container p-6 mx-auto my-8 bg-white font-jakartaSans rounded-xl">
         <h5 class="text-xl font-bold">Billing Info</h5>
+        <form action="{{ route('booking.send')}}" method="POST">
+            @csrf
         <p class="text-[#90A3BF] font-medium">Masukkan Data Anda</p>
         <div class="grid grid-cols-2 mt-12 gap-x-8 gap-y-10">
             <div>
