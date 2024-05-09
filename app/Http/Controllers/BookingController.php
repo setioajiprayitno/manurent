@@ -25,7 +25,7 @@ class BookingController extends Controller
             'transmisi' => 'required|string|max:255',
             'time' => 'required|date_format:H:i',
             'date' => 'required|date_format:Y-m-d',
-            'supir' => 'required|boolean',
+            'driver' => 'required|boolean',
         ], [
             'name.required' => 'Nama harus diisi.',
             'phoneNumber.required' => 'Nomor HP harus diisi.',
@@ -38,8 +38,8 @@ class BookingController extends Controller
             'jam.date_format' => 'Format jam tidak valid.',
             'date.required' => 'Tanggal harus diisi.',
             'tanggal.date_format' => 'Format tanggal tidak valid.',
-            'supir.required' => 'Pilihan supir harus diisi.',
-            'supir.boolean' => 'Format pilihan supir tidak valid.',
+            'driver.required' => 'Pilihan supir harus diisi.',
+            'driver.boolean' => 'Format pilihan supir tidak valid.',
         ]);
 
         if ($validator->fails()) {

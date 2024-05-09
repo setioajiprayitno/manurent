@@ -20,7 +20,7 @@
             <div class="py-1" role="none">
                 <template x-for="item in items">
                     <p class="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                        x-text="item" @click="click(item), open = false"></p>
+                        x-text="item" @click="click(item), findValue('{{ $name }}', item), open = false"></p>
                 </template>
             </div>
         </div>
