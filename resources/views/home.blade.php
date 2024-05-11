@@ -3,7 +3,7 @@
         bg-black
     </x-slot>
     <div class="relative min-h-100">
-        <img src="assets/images/BG.png" alt="image" class="object-cover w-full bg-no-repeat h-80">
+        <img src="assets/images/BG.png" alt="image" class="object-cover w-full bg-no-repeat h-80 brightness-[.4]">
         <div class="w-full bg-[#D9D9D9] h-[500px]"></div>
         <div class="w-full bg-[#FFB800] h-[420px]"></div>
         <div class="absolute top-0 text-center font-poppins">

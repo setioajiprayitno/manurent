@@ -3,7 +3,7 @@
         bg-black
     </x-slot>
     <div class="relative min-h-100">
-        <img src="assets/images/BG.png" alt="image" class="object-cover w-full bg-no-repeat h-80">
+        <img src="assets/images/BG.png" alt="image" class="object-cover w-full bg-no-repeat h-80 brightness-75">
         <div class="w-full bg-[#D9D9D9] h-screen relative">
             <div class="absolute top-0 font-poppins">
                 <h5 class="mt-10 text-2xl font-bold ms-10">Daftar Mobil</h5>

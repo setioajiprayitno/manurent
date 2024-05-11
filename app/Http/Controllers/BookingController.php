@@ -43,11 +43,12 @@ class BookingController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
         Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
 
-        return response()->json(['message' => 'Email berhasil terkirim']);
+        return redirect('/success');
+        // return response()->json(['message' => 'Email berhasil terkirim']);
     }
 }
