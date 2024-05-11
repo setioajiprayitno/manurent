@@ -73,6 +73,27 @@
             <div class="p-6 mx-auto my-8 bg-white font-jakartaSans rounded-xl">
                 <h5 class="text-xl font-bold">Data Rental</h5>
                 <p class="text-[#90A3BF] font-medium">Isi Data Rental Pilihan Anda</p>
+            <div class="grid grid-cols-2 mt-12 gap-x-8 gap-y-10">
+                <div x-data="{
+                    open: false,
+                    active: false,
+                    items: [
+                        'CRV', 'BRV', 'Brio', 'Jazz', 'Civic', 'City', 'Mobolio', 'All New Terios',
+                        'All New Avanza', 'New Ertiga', 'Innova 2.0', 'Innova 2.5', 'All New Rush'
+                        ],
+                    selected: 'Pilih Mobil',
+                    click(selected) {
+                        this.selected = selected;
+                        this.active = true;
+                    },
+                    findValue(name, item) {
+                        const inputField = document.querySelector(`.${name}`);
+                        inputField.value = item;
+                        console.log(inputField);
+                    }
+                }">
+                    <x-form-dropdown title="Jenis Mobil" name="jenisMobil" />
+                </div>
 
                 <div class="grid grid-cols-2 mt-12 gap-x-8 gap-y-10">
                     <div x-data="{

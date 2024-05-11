@@ -35,7 +35,7 @@ class BookingController extends Controller
             'jenisMobil.required' => 'Jenis mobil harus diisi.',
             'transmisi.required' => 'Transmisi harus diisi.',
             'time.required' => 'Jam harus diisi.',
-            'jam.date_format' => 'Format jam tidak valid.',
+            'time.date_format' => 'Format jam tidak valid.',
             'date.required' => 'Tanggal harus diisi.',
             'tanggal.date_format' => 'Format tanggal tidak valid.',
             'driver.required' => 'Pilihan supir harus diisi.',
@@ -49,6 +49,5 @@ class BookingController extends Controller
         Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
 
         return redirect('/success');
-        // return response()->json(['message' => 'Email berhasil terkirim']);
     }
 }
