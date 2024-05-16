@@ -26,4 +26,8 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
+Route::get('/success', function () {
+    return view('components.alert-success');
+});
+
 Route::post('/send', [BookingController::class, 'send'])->name('booking.send');

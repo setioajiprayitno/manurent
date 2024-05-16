@@ -46,7 +46,8 @@ class Booking extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'emails.booking'
+            markdown: 'emails.booking',
+            with: $this->data,
         );
     }
 

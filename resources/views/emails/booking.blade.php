@@ -1,6 +1,5 @@
 <x-mail::message>
     # BOOKING
-
     Nama        : {{ $data['name']}}
     Nomor HP    : {{ $data['phoneNumber']}}
     Alamat      : {{ $data['address']}}
