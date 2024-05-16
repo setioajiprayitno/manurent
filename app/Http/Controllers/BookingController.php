@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\BookingJob;
 use App\Mail\Booking;
+use App\Models\Booking as ModelsBooking;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -46,7 +48,10 @@ class BookingController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
+        ModelsBooking::create(request()->all());
+        // Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
+        $job = (new BookingJob(request()->all()));
+        dispatch($job);
 
         return redirect('/success');
     }
