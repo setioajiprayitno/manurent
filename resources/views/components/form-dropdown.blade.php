@@ -1,14 +1,13 @@
-<div>
-    <label class="block text-base font-semibold text-[#1A202C]">{{ $title }}</label>
+<div class="space-y-2 md:space-y-4">
+    <label class="block text-sm md:text-base font-semibold text-[#1A202C]">{{ $title }}</label>
     <div class="relative">
-        <div class="mt-4">
-            <button type="button"
-                class="flex w-full justify-between rounded-md bg-[#FFEDCB] ring-[#FFEDCB] px-6 py-4 text-sm font-semibold text-[#90A3BF] shadow-sm ring-1 ring-inset focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-700"
-                id="menu-button" :class="{ 'text-gray-900': active, 'text-[#90A3BF]': !active }" @click="open = !open">
-                <p x-text="selected"></p>
-                <i class="my-auto items fa-solid fa-chevron-down"></i>
-            </button>
-        </div>
+        <button type="button"
+            class="flex w-full justify-between rounded-md bg-[#FFEDCB] ring-[#FFEDCB] px-4 md:px-6 py-3 md:py-4 text-sm text-[#90A3BF] shadow-sm ring-1 ring-inset focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-700 md:text-base"
+            id="menu-button" :class="{ 'text-gray-900': active, 'text-[#90A3BF]': !active }" @click="open = !open">
+            <p x-text="selected"></p>
+            <i class="my-auto items fa-solid fa-chevron-down"></i>
+        </button>
+
         <div class="absolute z-10 w-full mt-1 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
             x-show="open" x-transition:enter="transition ease-out duration-100"
             x-transition:enter-start="transform opacity-0 scale-95"
