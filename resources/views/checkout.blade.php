@@ -2,6 +2,7 @@
     <div class="block py-3 text-xl font-semibold text-center shadow md:hidden text-philippineYellow">
         MANURENT.
     </div>
+
     <div class="container px-5 mx-auto xl:p-0">
         @if ($errors->any())
             <div class="bg-[#F8D7DA] p-4 ps-10 rounded-xl mt-8">
