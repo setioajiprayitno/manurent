@@ -10,9 +10,6 @@ module.exports = {
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],
                 jakartaSans: ['Plus Jakarta Sans', 'sans-serif'],
-            },
-            colors: {
-                philippineYellow: '#FFC700',
             }
         },
     },

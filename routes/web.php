@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\BookingController;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn () => view('home'))->name('home');
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/car', fn () => view('car'))->name('car');
+Route::get('/car', function () {
+    return view('car');
+});
 
-Route::get('/checkout', fn () => view('checkout'))->name('checkout');
+Route::get('/checkout', function () {
+    return view('checkout');
+});
 
-Route::get('/success', fn () => view('components.alert-success'))->name('alert-success');
+Route::get('/success', function () {
+    return view('components.alert-success');
+});
 
 Route::post('/send', [BookingController::class, 'send'])->name('booking.send');

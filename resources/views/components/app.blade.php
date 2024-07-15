@@ -1,5 +1,3 @@
-@props(['color' => 'bg-white'])
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +19,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="{{ $color }}">
+<body class="{{ $color ?? 'bg-white' }}">
     {{ $slot }}
 </body>
 
