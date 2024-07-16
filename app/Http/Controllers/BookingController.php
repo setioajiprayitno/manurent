@@ -13,7 +13,7 @@ class BookingController extends Controller
 
     public function index()
     {
-        return "test";
+        //
     }
 
     public function send()
@@ -49,7 +49,7 @@ class BookingController extends Controller
         }
 
         ModelsBooking::create(request()->all());
-        // Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
+        Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
         $job = (new BookingJob(request()->all()));
         dispatch($job);
 

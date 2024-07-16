@@ -8,6 +8,21 @@
                 SEWA MOBIL CEPAT GAK PAKE RIBET!</h1>
         </div>
 
+        @if (Route::has('login'))
+            <div class="fixed top-0 right-0 hidden px-6 py-4 sm:block">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline dark:text-gray-500">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline dark:text-gray-500">Log in</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}"
+                            class="ml-4 text-sm text-gray-700 underline dark:text-gray-500">Register</a>
+                    @endif
+                @endauth
+            </div>
+        @endif
+
         <div class="top-0 w-full text-center font-poppins bg-[#D9D9D9] py-1 md:py-3">
             <h2 class="text-xl font-medium md:text-5xl font-jakartaSans">Cara Kerja</h2>
             <p class="my-3 text-base font-normal md:text-xl md:my-12 font-jakartaSans">
