@@ -2,25 +2,13 @@
 
 namespace App\View\Components;
 
+use App\Models\Mobil;
 use Illuminate\View\Component;
 
 class itemCarRent extends Component
 {
-    public string $brand;
-    public string $name;
-    public string $price;
-    public string $src;
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct($brand, $name, $price, $src)
+    public function __construct(public Mobil $car)
     {
-        $this->brand = $brand;
-        $this->name = $name;
-        $this->price = $price;
-        $this->src = $src;
     }
 
     /**

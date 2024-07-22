@@ -11,10 +11,16 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
+                jakartaSans: ['Plus Jakarta Sans', 'sans-serif'],
             },
+            colors: {
+                philippineYellow: '#FFC700',
+            }
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 };

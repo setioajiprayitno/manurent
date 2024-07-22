@@ -1,10 +1,10 @@
 <div class="p-5 font-bold text-gray-900 bg-white rounded-lg shadow-lg font-jakartaSans">
-    <h6>{{ $name }}</h6>
-    <p class="text-[#90A3BF]">{{ $brand }}</p>
-    <img src="{{ asset("assets/images/$src") }}" alt="image" class="object-cover mx-auto my-6 h-36">
+    <h6>{{ $car->tipeMobil }}</h6>
+    <p class="text-[#90A3BF]">{{ $car->jenisMobil }}</p>
+    <img src="{{ asset(Storage::url($car->fotoMobil)) }}" alt="image" class="object-cover mx-auto my-6 h-36">
     <div class="flex justify-between">
         <div class="flex flex-col">
-            <h5>Rp. {{ $price }}</h5>
+            <h5>Rp. {{ number_format($car->harga) }}</h5>
             <p class="text-[#90A3BF]">Day</p>
         </div>
         <a href="checkout">
