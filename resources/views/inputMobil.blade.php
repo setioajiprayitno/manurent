@@ -1,51 +1,33 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 white:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="text-xl font-semibold leading-tight text-gray-800 white:text-gray-200">
+            {{ __('Input Mobil') }}
         </h2>
     </x-slot>
 
-
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white white:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="overflow-hidden bg-white shadow-sm white:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 white:text-gray-100">
-                    {{ __('Selamat Datang!') }} {{ Auth::user()->name }}
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white white:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 white:text-gray-100">
-                    <h3 class="text-lg font-medium text-gray-900 white:text-gray-100 mb-4">{{ __('Input Car Data') }}
-                    </h3>
-
-                    <form action="{{ route('tambahMobil') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('tambah-mobil') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-4">
                             <label for="tipeMobil"
                                 class="block text-sm font-medium text-gray-700">{{ __('Tipe Mobil') }}</label>
-                            <input type="text" name="tipeMobil" id="tipeMobil"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                required>
+                            <x-text-input-breeze name="tipeMobil" class="w-full mt-1" required />
                         </div>
 
                         <div class="mb-4">
                             <label for="jenisMobil"
                                 class="block text-sm font-medium text-gray-700">{{ __('Jenis Mobil') }}</label>
-                            <input type="text" name="jenisMobil" id="jenisMobil"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                required>
+                            <x-text-input-breeze name="jenisMobil" class="w-full mt-1" required />
                         </div>
 
                         <div class="mb-4">
                             <label for="transmisi"
                                 class="block text-sm font-medium text-gray-700">{{ __('Transmisi') }}</label>
                             <select name="transmisi" id="transmisi"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                class="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                                 required>
                                 <option value="matic">{{ __('Automatic') }}</option>
                                 <option value="manual">{{ __('Manual') }}</option>
@@ -55,22 +37,18 @@
                         <div class="mb-4">
                             <label for="harga"
                                 class="block text-sm font-medium text-gray-700">{{ __('Harga Sewa') }}</label>
-                            <input type="text" name="harga" id="harga"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                required>
+                            <x-text-input-breeze name="harga" class="w-full mt-1" required />
                         </div>
 
                         <div class="mb-4">
                             <label for="fotoMobil"
                                 class="block text-sm font-medium text-gray-700">{{ __('Foto Mobil') }}</label>
-                            <input type="file" name="fotoMobil" id="fotoMobil"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                required>
+                            <input type="file" name="fotoMobil"
+                                class="block w-full bg-white border border-gray-300 rounded-md shadow-sm file:rounded-md file:border-0 file:bg-gray-900 file:text-white file:py-2 file:px-3 file:hover:cursor-pointer active:border-indigo-500 active:ring-indigo-500" />
                         </div>
 
                         <div class="flex justify-end">
-                            <button type="submit"
-                                class="px-4 py-2 bg-blue-600 text-black rounded-md">{{ __('Submit') }}</button>
+                            <x-primary-button title="Tambah" />
                         </div>
                     </form>
 

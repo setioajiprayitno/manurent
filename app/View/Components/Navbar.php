@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class text-input1 extends Component
+class Navbar extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class text-input1 extends Component
      */
     public function render()
     {
-        return view('components.text-input1');
+        return view('components.navbar');
     }
 }

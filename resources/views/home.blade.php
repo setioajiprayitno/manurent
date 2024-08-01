@@ -1,27 +1,14 @@
 <x-app color="bg-black">
     <div class="min-h-100">
         <div class="relative block">
-            <img src="assets/images/BG.png" alt="image"
+            <img src="{{ asset('assets/images/BG.png') }}" alt="image"
                 class="object-cover w-full bg-no-repeat md:h-80 brightness-[.4]">
             <h1
                 class="absolute top-1/2 -translate-y-1/2 text-white md:w-[650px] md:leading-[100px] font-extrabold text-2xl md:text-6xl md:start-1/2 md:-translate-x-1/2 text-center">
                 SEWA MOBIL CEPAT GAK PAKE RIBET!</h1>
         </div>
 
-        @if (Route::has('login'))
-            <div class="fixed top-0 right-0 hidden px-6 py-4 sm:block">
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline dark:text-gray-500">Dashboard</a>
-                @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline dark:text-gray-500">Log in</a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                            class="ml-4 text-sm text-gray-700 underline dark:text-gray-500">Register</a>
-                    @endif
-                @endauth
-            </div>
-        @endif
+        <x-navbar />
 
         <div class="top-0 w-full text-center font-poppins bg-[#D9D9D9] py-1 md:py-3">
             <h2 class="text-xl font-medium md:text-5xl font-jakartaSans">Cara Kerja</h2>
@@ -56,9 +43,10 @@
             <p class="text-sm font-semibold text-white md:text-base">
                 Kami menyiapkan beberapa rekomendasi mobil untuk anda</p>
             <div class="grid grid-cols-1 gap-3 my-8 md:mx-10 md:grid-cols-4">
-                <x-item-rekomendasi-mobil src="AVANZA.png" title="All New Avanza" brand="Toyota" />
-                <x-item-rekomendasi-mobil src="TERIOS.png" title="All New Terios" brand="Daihatsu" />
-                <x-item-rekomendasi-mobil src="BRIO.png" title="Brio" brand="Honda" />
+
+                @foreach ($cars as $car)
+                    <x-item-rekomendasi-mobil :car="$car" />
+                @endforeach
                 <a href="car" class="w-full h-56">
                     <div class="bg-white rounded-[30px] flex flex-col justify-evenly h-full">
                         <p class="text-2xl font-medium">Show More</p>

@@ -1,8 +1,3 @@
-{{-- @props(['disabled' => false])
-
-<input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
-    'class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm',
-]) !!}> --}}
 <div class="space-y-2 md:space-y-4">
     <label for="{{ $name }}"
         class="block text-sm md:text-base font-semibold text-[#1A202C]">{{ $placeholder }}</label>
