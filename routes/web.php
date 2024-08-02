@@ -30,7 +30,9 @@ Route::get('/car', fn () => view('car', [
     'cars' => Mobil::all(),
 ]))->name('car');
 
-Route::get('/checkout', fn () => view('checkout'))->name('checkout');
+Route::get('/checkout', fn () => view('checkout', [
+    'cars' => Mobil::all(),
+]))->name('checkout');
 
 Route::get('/success', fn () => view('components.alert-success'))->name('alert-success');
 
