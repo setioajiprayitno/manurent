@@ -44,10 +44,7 @@
                     <div x-data="{
                         open: false,
                         active: false,
-                        items: [
-                            'CRV', 'BRV', 'Brio', 'Jazz', 'Civic', 'City', 'Mobolio', 'All New Terios',
-                            'All New Avanza', 'New Ertiga', 'Innova 2.0', 'Innova 2.5', 'All New Rush'
-                        ],
+                        items: {{ $cars->map(fn($e) => $e->tipeMobil) }},
                         selected: 'Pilih Mobil',
                         click(selected) {
                             this.selected = selected;

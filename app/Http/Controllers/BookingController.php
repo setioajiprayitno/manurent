@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Jobs\BookingJob;
 use App\Mail\Booking;
 use App\Models\Booking as ModelsBooking;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
 
 class BookingController extends Controller
 {
@@ -16,9 +18,9 @@ class BookingController extends Controller
         //
     }
 
-    public function send()
+    public function send(Request $request): Redirector|RedirectResponse
     {
-        $validator = Validator::make(request()->all(), [
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'phoneNumber' => 'required|string|max:20',
             'address' => 'required|string|max:255',
@@ -44,15 +46,15 @@ class BookingController extends Controller
             'driver.boolean' => 'Format pilihan supir tidak valid.',
         ]);
 
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+        if (!$validated) {
+            return back()->withErrors($validated);
         }
 
         ModelsBooking::create(request()->all());
         Mail::to('manurent@gmail.com')->send(new Booking(request()->all()));
-        $job = (new BookingJob(request()->all()));
+        $job = new BookingJob(request()->all());
         dispatch($job);
 
-        return redirect('/success');
+        return redirect(route('alert-success'));
     }
 }
